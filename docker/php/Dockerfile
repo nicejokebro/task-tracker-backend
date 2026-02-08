@@ -44,7 +44,7 @@ WORKDIR /var/www/html
 
 # Копируем composer.json и .env
 COPY composer.json composer.lock symfony.lock ./
-COPY .env .env.local ./
+COPY .env ./
 
 # Устанавливаем зависимости
 RUN composer install --no-interaction --prefer-dist --optimize-autoloader --no-scripts
